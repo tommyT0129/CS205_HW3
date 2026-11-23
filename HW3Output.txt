@@ -1,0 +1,56 @@
+-- listing properties --
+KeyValueDelimiter=:
+DelimiterBetweenOverAndVehicle=,
+LogFileName=HW3Output.txt
+
+equals() / hashCode() consistency
+Equals HashCode: true
+Equals HashCode: true
+Equals HashCode: true
+Equals HashCode: true
+Equals HashCode: true
+Equals HashCode: true
+Equals HashCode: true
+Equals HashCode: true
+Equals HashCode: true
+Equals HashCode: true
+Equals HashCode: true
+Equals HashCode: true
+
+Reading OwnerVehicle.txt
+Line 3 discarded - invalid owner/vehicle string: ""
+Line 4 discarded - invalid owner string: ":b,,"
+Line 5 discarded - invalid owner/vehicle string: "d,FUELOIL,100"
+Line 7 discarded - invalid owner string: "Ken Thompson:b,FUELOIL, 25"
+Line 10 discarded - invalid owner/vehicle string: "Ken Thompson:,1943:b,FUELOIL,300 c,GASOLINE,9"
+Line 11 discarded - Engine size must be between 1 and 199: -98: "Ken Thompson,1943:c,GASOLINE,-98"
+Line 12 discarded - not a whole number: "James Gosling,1955:c,GASOLINE,20o"
+Line 13 discarded - Boat length must be between 1 and 1300: 81902: "James Gosling,1955:b,FUELOIL,81902"
+
+Number of key-value mappings: 9
+
+  Owner [name=Tim Berners-Lee, yearOfBirth=1955]: Boat [boatLength=300, powerSource=ELECTRICITY]
+  Owner [name=Guido van Rossum, yearOfBirth=1956]: Car [engineSize=10, powerSource=ELECTRICITY]
+  Owner [name=Dennis Ritchie, yearOfBirth=1941]: Boat [boatLength=42, powerSource=ELECTRICITY]
+  Owner [name=John von Neumann, yearOfBirth=1903]: Car [engineSize=6, powerSource=FUELOIL]
+  Owner [name=Ada Lovelace, yearOfBirth=1815]: Car [engineSize=6, powerSource=DEISEL]
+  Owner [name=Brian Kernighan, yearOfBirth=1942]: Car [engineSize=4, powerSource=GASOLINE]
+  Owner [name=Grace Hopper, yearOfBirth=1906]: Boat [boatLength=100, powerSource=GASOLINE]
+  Owner [name=Alan Turing, yearOfBirth=1912]: Car [engineSize=4, powerSource=GASOLINE]
+  Owner [name=Bjarne Stroustrup, yearOfBirth=1950]: Car [engineSize=9, powerSource=FUELOIL]
+
+containsKey(Owner [name=Alan Turing, yearOfBirth=1912]): true
+remove(Owner [name=Alan Turing, yearOfBirth=1912]): Car [engineSize=4, powerSource=GASOLINE]
+Number of key-value mappings: 8
+  Owner [name=Tim Berners-Lee, yearOfBirth=1955]: Boat [boatLength=300, powerSource=ELECTRICITY]
+  Owner [name=Guido van Rossum, yearOfBirth=1956]: Car [engineSize=10, powerSource=ELECTRICITY]
+  Owner [name=Dennis Ritchie, yearOfBirth=1941]: Boat [boatLength=42, powerSource=ELECTRICITY]
+  Owner [name=John von Neumann, yearOfBirth=1903]: Car [engineSize=6, powerSource=FUELOIL]
+  Owner [name=Ada Lovelace, yearOfBirth=1815]: Car [engineSize=6, powerSource=DEISEL]
+  Owner [name=Brian Kernighan, yearOfBirth=1942]: Car [engineSize=4, powerSource=GASOLINE]
+  Owner [name=Grace Hopper, yearOfBirth=1906]: Boat [boatLength=100, powerSource=GASOLINE]
+  Owner [name=Bjarne Stroustrup, yearOfBirth=1950]: Car [engineSize=9, powerSource=FUELOIL]
+
+containsKey(Owner [name=Linus Torvalds, yearOfBirth=1969]): false
+remove(Owner [name=Linus Torvalds, yearOfBirth=1969]): null
+Number of key-value mappings: 8

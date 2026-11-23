@@ -1,0 +1,15 @@
+1. What method(s) is/are invoked when adding to a HashMap?
+   put(key, value) first calls the key's hashCode() method. HashMap mixes that value and uses it to pick a bucket. If the bucket already holds entries, HashMap compares each existing key with the new key, first with == and then with the key's equals() method. If an equal key is found, its value is replaced and the old value is returned; otherwise a new entry is added and null is returned.
+
+2. What methods were invoked when using the HashMap's remove() and contains() methods?
+   remove() and contains() call the key's hashCode() to find the bucket, then use == and the key's equals() to find the matching entry in that bucket. contains() returns true/false. remove() unlinks the entry and returns its value (or null if no key matched).
+   
+3. What is meant by the statement: "ensure an object's equals() and hashCode()
+   methods are consistent"?
+   If two objects are equal according to equals(), they must return the same hashCode(). Both methods must therefore be based on the same attributes.
+
+4. Explain the difference between the HashMap and Hashtable classes.
+   Hashtable's methods are synchronized; HashMap is not synchronized.
+
+5. When using HashMap's default constructor, what is the capacity of the hash table? Given this capacity and the number of key-value pair mappings, what is the load factor?
+   The default constructor creates a HashMap with an initial capacity of 16 buckets and a default load factor of 0.75. The map resizes (doubles) when the number of mappings exceeds capacity * load factor = 16 * 0.75 = 12. OwnerVehicle.txt produced 9 valid key-value mappings, so the table never resized and the actual load is 9 / 16 = 0.5625. After removing Alan Turing there are 8 mappings, so the load is 8 / 16 = 0.5. Both are below the 0.75 load factor threshold.
