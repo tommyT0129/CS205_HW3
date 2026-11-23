@@ -62,9 +62,9 @@ public class Plane implements Vehicle {
     
     @Override
     public int hashCode() {
-        int result = numSeat;
-        result += powerSource.hashCode();
-        return result;
+    	int result = powerSource.hashCode();
+		result = 31 * result + numSeat;
+		return result;
     }
     
     @Override

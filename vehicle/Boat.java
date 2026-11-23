@@ -67,9 +67,9 @@ public class Boat implements Vehicle {
     
     @Override
     public int hashCode() {
-        int result = boatLength;
-        result += powerSource.hashCode();
-        return result;
+        int result = powerSource.hashCode();
+		result = 31 * result + boatLength;
+		return result;
     }
     
     @Override

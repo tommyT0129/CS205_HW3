@@ -62,9 +62,9 @@ public class Car implements Vehicle {
     
     @Override
     public int hashCode() {
-        int result = engineSize;
-        result += powerSource.hashCode();
-        return result;
+    	int result = powerSource.hashCode();
+		result = 31 * result + engineSize;
+		return result;
     }
     
     @Override
